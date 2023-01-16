@@ -1,20 +1,33 @@
 pipeline {
     agent any
-    stages {
-        stage ('fetch code') {
-            step {
-                git branch: 'main', url: 'https://github.com/mcpatral/mcpatral.git'
-            }
-        }
-        stage ('Build') {
-            steps {
-                sh 'mvn install'
-            }
-        }
-        stage ('test') {
-            step {
-                sh 'mvn test'
-            }
-        }
+     stages{
+      stage('Hello'){
+       steps {
+         echo "Hello World"
+         sleep 10
+       }
     }
+    stage('Build'){
+       steps {
+         echo "Hello World"
+         sleep 5
+       }
+    }
+    stage('test'){
+       steps {
+         echo "Hello World"
+         sleep 10
+       }
+    }
+    stage('Deploy'){
+       steps {
+         echo "Hello World"
+         sleep 10
+       }
+    }
+    
+    }
+    
+    
+
 }
